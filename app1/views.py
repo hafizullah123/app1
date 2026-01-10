@@ -1,6 +1,7 @@
-from django.http import HttpResponse
-def homepage(request):
-    return HttpResponse('this is the home page off app1')
+from django.shortcuts import render
+
+def home(request):
+    return render(request, 'home.html')
+
 def about(request):
-    return HttpResponse('this is the about page off app1')
-    
+    return render(request, 'about.html')
